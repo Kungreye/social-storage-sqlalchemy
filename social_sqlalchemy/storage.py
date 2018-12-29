@@ -8,7 +8,7 @@ try:
 except ImportError:
     transaction = None
 
-from sqlalchemy import Column, Integer, String1
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.exc import IntegrityError, InvalidRequestError
 from sqlalchemy.types import PickleType, Text
 from sqlalchemy.schema import UniqueConstraint
