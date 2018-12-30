@@ -148,7 +148,7 @@ class SQLAlchemyUserMixin(SQLAlchemyMixin, UserMixin):
     def create_user(cls, *args, **kwargs):
         avatar_url = kwargs.pop('avatar_url', None)
         prefile_type = kwargs.pop('prefile_type', None)
-        profile_url = kwargs.pop('profile_type', None)
+        profile_url = kwargs.pop('profile_url', None)
         kwargs['{}_url'.format(prefile_type)] = profile_url
         kwargs['active'] = True
         ins = cls._new_instance(cls.user_model(), *args, **kwargs)
